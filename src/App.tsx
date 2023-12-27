@@ -9,7 +9,7 @@ function App() {
   return (
     <>
      <Layout>
-      <p className="text-3xl font-bold mb-4">Welcome to our D&D world</p>
+      <p className="text-3xl font-bold mb-4 text-neutral-50">Welcome to our D&D world</p>
     </Layout>
     </>
   )
