@@ -5,6 +5,7 @@ export const WelcomePage =() =>{
            <h1 className="mx-auto mb-4 font-bold">Welcome to our D&D Adventure!</h1>
            <p>In this website you will find any information related to the D&D games me and my friends are playing!</p>
            <p>Note that this is for academic purpose, so constructive comments are apreciated!</p>
+           <p>This website is inspired by <a href="https://www.starrailakademiya.com/" target="_blank" className="text-amber-300 hover:underline">StarRailAkademiya!</a></p>
         </div>
     );
 }

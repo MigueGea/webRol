@@ -1,25 +1,22 @@
-import { FC, useState } from 'react';
+import { FC, useState,ReactNode } from 'react';
 import { WelcomePage } from './WelcomePage';
 import { NavigationBar } from './NavigationBar';
-import { CharacterLayout } from './CharacterLayout';
+import { handlePageChange } from '../ts/layout/layoutFuncions.ts';
+import { CharacterLayout } from './CharacterLayout.tsx';
 
 
 export const Layout: FC = () =>{
     
-    const [currentPage, setCurrentPage] = useState(<WelcomePage/>)
+    const [currentPage, setCurrentPage] = useState<ReactNode>(<CharacterLayout/>);
 
-    const handlePageChange = (option: string) =>{
-        if(option == 'home'){
-            setCurrentPage(<WelcomePage/>);
-        }else if(option == 'characters'){
-            setCurrentPage(<CharacterLayout/>);
-        }
+    const onPageChange = (option: string) =>{
+        handlePageChange(option, setCurrentPage);
     }
     return (
         //Main div
         <div  className="flex h-screen">
              {/* Left column */}
-                <NavigationBar onPageChange={handlePageChange}/>
+                <NavigationBar onPageChange={onPageChange}/>
             
              {/* Rigth column */}   
             <div id="layoutRigthSide" className="container px-20 py-10">

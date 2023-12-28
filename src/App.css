@@ -3,5 +3,9 @@
 @tailwind utilities;
 
 .li-navigation-bar {
-  @apply mb-2 px-4 py-2 hover:bg-black/20 flex gap-3 cursor-pointer;
+  @apply px-4 py-2 hover:bg-black/20 flex gap-3 cursor-pointer;
+}
+
+.li-selected {
+  @apply px-4 py-2 bg-black/20 flex gap-3 cursor-pointer text-amber-300 border-y border-y-teal-900;
 }
