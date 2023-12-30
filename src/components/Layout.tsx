@@ -3,26 +3,30 @@ import { WelcomePage } from './WelcomePage';
 import { NavigationBar } from './NavigationBar';
 import { handlePageChange } from '../ts/layout/layoutFuncions.ts';
 import { CharacterLayout } from './CharacterLayout.tsx';
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 
 export const Layout: FC = () =>{
     
-    const [currentPage, setCurrentPage] = useState<ReactNode>(<CharacterLayout/>);
+    const [currentPage, setCurrentPage] = useState<string>("home");
 
-    const onPageChange = (option: string) =>{
-        handlePageChange(option, setCurrentPage);
-    }
+   
     return (
         //Main div
+        <Router>
         <div  className="flex h-screen">
              {/* Left column */}
-                <NavigationBar onPageChange={onPageChange}/>
+                <NavigationBar/>
             
              {/* Rigth column */}   
             <div id="layoutRigthSide" className="container px-20 py-10">
-              {currentPage}
+           <Routes> 
+                <Route path="/" element={<WelcomePage />} />
+                <Route path="/characters" element={<CharacterLayout />} />
+           </Routes>        
              </div>
         </div>
+        </Router>
        
 
     )

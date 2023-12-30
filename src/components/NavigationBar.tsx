@@ -1,15 +1,22 @@
-import { FC, useState } from "react";
+import { FC, useEffect, useState } from "react";
+import { Link,useLocation  } from "react-router-dom";
+import { handlePageChange } from "../ts/layout/layoutFuncions";
 
 interface NavigationBarProps {
     onPageChange: (option: string) => void;
   }
-export const NavigationBar: FC<NavigationBarProps> = ({ onPageChange }) => {
+export const NavigationBar: FC = () => {
 
+    let {state} = useLocation();
+    useEffect(()=> {
+        
+        handlePageChange(state.location);
+
+    }, [state]);
     const [liSelected, setSelected ] = useState<string>('home'); 
 
     const handleLiClick = (option:string) =>{
         setSelected(option);
-        onPageChange(option);
     }
 
     return ( <div id="layoutLeftSide" className="flex-shrink-0 w-1/6 bg-neutral-900 border-r border-r-teal-800 xl:flex flex-col">
@@ -24,17 +31,23 @@ export const NavigationBar: FC<NavigationBarProps> = ({ onPageChange }) => {
   {/* Option list */}
   <div className="mt-5 grow border-b border-y-teal-800">
       <ul className="text-xl font-semibold mb-4 text-neutral-300">
-          <li onClick={() => handleLiClick('home')} className={`li-navigation-bar ${liSelected == 'home' ? 'li-selected' : ''}`}>
+      <Link state={{ location: "home" }}  to="/">
+          <li id="liHome" onClick={() => handleLiClick('home')} className={`li-navigation-bar ${liSelected == 'home' ? 'li-selected' : ''}`}>
               <svg className="w-9 fill-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <title>home</title>
                 <path d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z"></path>
               </svg>
               <p className="my-auto">Home</p>
+             
           </li>
-          <li onClick={() => handleLiClick('characters')} className={`li-navigation-bar ${liSelected == 'characters' ? 'li-selected' : ''}`}>
+          </Link>
+          <Link to="/characters" state={{ location: "characters" }}>
+          <li  id="liCharacters" onClick={() => handleLiClick('characters')} className={`li-navigation-bar ${liSelected == 'characters' ? 'li-selected' : ''}`}>
+              
               <img className="w-9" src="/src/assets/img/characters.png"/>
-              <p className="my-auto">Characters</p>           
+              <p className="my-auto">Characters</p>    
           </li>
+          </Link> 
           <li onClick={() => handleLiClick('classes')} className={`li-navigation-bar ${liSelected == 'classes' ? 'li-selected' : ''}`}>
               <img className="w-9" src="/src/assets/img/classes.png"/>
               <p className="my-auto">Classes</p>  

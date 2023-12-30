@@ -1,11 +1,19 @@
-import { Dispatch, ReactNode, SetStateAction } from "react"
-import { WelcomePage } from './../../components/WelcomePage';
-import { CharacterLayout } from './../../components/CharacterLayout';
 
-export const handlePageChange = (option: string, setCurrentPage: Dispatch<SetStateAction<ReactNode>>) =>{
-    if(option == 'home'){
-        setCurrentPage(WelcomePage);
-    }else if(option == 'characters'){
-        setCurrentPage(CharacterLayout);
+export const handlePageChange = (option: string) =>{
+    console.log(option);
+    const liHome = document.getElementById("liHome");
+    const liCharacters = document.getElementById("liCharacters")
+    switch (option) {
+        
+        case "home":
+            liHome?.classList.add("li-selected");
+            liCharacters?.classList.remove("li-selected");
+            break;
+        case "characters":
+            liCharacters?.classList.add("li-selected");
+            liHome?.classList.remove("li-selected");
+            break;
+        default:
+            break;
     }
 }
