@@ -14,6 +14,8 @@ export const handlePageChange = (option: string) =>{
             liHome?.classList.remove("li-selected");
             break;
         default:
+            liHome?.classList.add("li-selected");
+            liCharacters?.classList.remove("li-selected");
             break;
     }
 }

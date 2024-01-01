@@ -6,11 +6,12 @@ interface NavigationBarProps {
     onPageChange: (option: string) => void;
   }
 export const NavigationBar: FC = () => {
-
+    //state of the current location
     let {state} = useLocation();
+    //when the location changes, this useEffect will execute
     useEffect(()=> {
-        
-        handlePageChange(state.location);
+        //change de css of navigation bar using de location
+        handlePageChange(state?.location ?? "");
 
     }, [state]);
     const [liSelected, setSelected ] = useState<string>('home'); 

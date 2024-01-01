@@ -1,16 +1,21 @@
-interface Character {
+export interface Character {
+    id: string;
     name: string;
+    player: string;
     class: string;
+    relevance: string;
     race: string;
     hero: string;
+    picture: string;
 }
 
-//Main Characters
-let Mopri : Character = {name:'Mopri', class:'picaro', race:'mediano', hero:'S'};
-let Pom : Character =  {name:'Pom', class:'Druida', race:'enano', hero:'S'};
-
-// NPCs
-let Mumpo : Character = {name:'Mumpo', class:'Guerrero', race:'dracónido', hero:'N'};
 
 //Character array
-let characters : Character[] = [Mopri, Pom, Mumpo];
+export const getCharacters = async() => {
+    const response = await fetch("src/JSONs/Characters.json");
+    if(response){
+        const data : Character[]= await response.json();
+        //crear el array de personajes.
+        return data;
+    }
+};
