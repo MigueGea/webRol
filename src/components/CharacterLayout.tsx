@@ -83,10 +83,7 @@ export const CharacterLayout =() =>{
                 </div>
             </div>
 
-            <div className="flex flex-wrap justify-around border border-teal-800 bg-neutral-900/90 rounded-md p-5 mt-10">
-                <CharacterList/>
-            </div>
-           
+            <CharacterList/>
            
         </div>
     );
