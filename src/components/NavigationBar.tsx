@@ -22,9 +22,11 @@ export const NavigationBar: FC = () => {
                 
     {/* main image container: */}
   <div className="flex justify-center ">
+    <Link state={{ location: "home" }}  to="/">
        <a href="/home" className="w-[70%] pt-4">                 
           <img src="/assets/img/mainWebIcon.png" alt="Welcome"/>
       </a> 
+      </Link>
   </div>
   {/* Option list */}
   <div className="mt-5 grow border-b border-y-teal-800">
