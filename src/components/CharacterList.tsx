@@ -1,4 +1,4 @@
-import React, { ReactNode, useEffect, useState } from 'react';
+import  {  useEffect, useState } from 'react';
 import { getCharacters,Character } from '../ts/interfaces/Character';
 
 export const CharacterList = () =>{

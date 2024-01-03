@@ -1,10 +1,7 @@
 import { useState } from "react";
 import { CharacterList } from "./CharacterList";
  
-interface CharacterFilter {
-    heroFilter:boolean,
-    npcFilter:boolean
-}
+
 export const CharacterLayout =() =>{
     const [heroFilter, setHeroFilter] = useState(false);
     const [npcFilter, setNpcFilter] = useState(false);

@@ -1,14 +1,13 @@
-import { FC, useState,ReactNode } from 'react';
+import { FC} from 'react';
 import { WelcomePage } from './WelcomePage';
 import { NavigationBar } from './NavigationBar';
-import { handlePageChange } from '../ts/layout/layoutFuncions.ts';
 import { CharacterLayout } from './CharacterLayout.tsx';
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 
 export const Layout: FC = () =>{
     
-    const [currentPage, setCurrentPage] = useState<string>("home");
+   
 
    
     return (
