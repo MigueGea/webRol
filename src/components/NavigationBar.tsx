@@ -2,9 +2,6 @@ import { FC, useEffect, useState } from "react";
 import { Link,useLocation  } from "react-router-dom";
 import { handlePageChange } from "../ts/layout/layoutFuncions";
 
-interface NavigationBarProps {
-    onPageChange: (option: string) => void;
-  }
 export const NavigationBar: FC = () => {
     //state of the current location
     let {state} = useLocation();
