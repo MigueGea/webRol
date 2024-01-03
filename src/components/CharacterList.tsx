@@ -28,7 +28,7 @@ return (
                   
                         <img className="" src={`${characterEach.picture}`}/>
                         <div>
-                             <img className="w-9 absolute right-1 top-1" src={`src/assets/icons/classes/${characterEach.class}.png`}></img>
+                             <img className="w-9 absolute right-1 top-1" src={`assets/icons/classes/${characterEach.class}.png`}></img>
                         </div>
                         <div className='flex flex-col flex-grow items-center'>
                             <p className=''>{characterEach.name}</p>

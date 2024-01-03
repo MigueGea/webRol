@@ -6,7 +6,7 @@
         "class":"rogue",
         "relevance":"hero",
         "race": "halfling",
-        "picture":"src/assets/img/characters/Mopri-WOB.png"
+        "picture":"assets/img/characters/Mopri-WOB.png"
     },
     {
         "id": "2",
@@ -15,7 +15,7 @@
         "class":"druid",
         "relevance":"hero",
         "race": "dwarf",
-        "picture":"src/assets/img/characters/Pom-WOB.png"
+        "picture":"assets/img/characters/Pom-WOB.png"
     },
     {
         "id": "3",
@@ -24,7 +24,7 @@
         "class":"cleric",
         "relevance":"hero",
         "race": "dwarf",
-        "picture":"src/assets/img/characters/Fernandog-WOB.png"
+        "picture":"assets/img/characters/Fernandog-WOB.png"
     },
     {
         "id": "4",
@@ -33,7 +33,7 @@
         "class":"paladin",
         "relevance":"hero",
         "race": "human",
-        "picture":"src/assets/img/characters/Kaala-WOB.png"
+        "picture":"assets/img/characters/Kaala-WOB.png"
     },
     {
         "id": "5",
@@ -42,7 +42,7 @@
         "class":"wizard",
         "relevance":"hero",
         "race": "tiefling",
-        "picture":"src/assets/img/characters/Ruina-WOB.png"
+        "picture":"assets/img/characters/Ruina-WOB.png"
 
     },
     {
@@ -52,7 +52,7 @@
         "class":"warrior",
         "relevance":"npc",
         "race":"kobold",
-        "picture":"src/assets/img/characters/Mumpo-WOB.png"
+        "picture":"assets/img/characters/Mumpo-WOB.png"
     }
 
 ]
