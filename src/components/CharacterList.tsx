@@ -21,10 +21,10 @@ export const CharacterList = () =>{
 return (
    //Div containing the character list
     <div className='flex flex-wrap gap-10 justify-center select-none xl:mx-10 my-2'>
-        {characters.map((characterEach, index) => (
+        {characters.map((characterEach) => (
             <a >
                 <div className='rounded-sm rounded-tr-3xl bg-slate-600/25 shadow-2xl ring-white backdrop-blur-sm transition duration-300 hover:ring-2 hover:scale-105'>
-                    <div className="relative w-40 h-[240px]" key={index}>
+                    <div className="relative w-40 h-[240px]" key={characterEach.id}>
                   
                         <img className="" src={`${characterEach.picture}`}/>
                         <div>
