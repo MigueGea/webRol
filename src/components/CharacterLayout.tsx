@@ -47,33 +47,33 @@ export const CharacterLayout =() =>{
                 <div className="flex justify-center">
                     <input type="checkbox" onClick={()=>{setRogueFilter(!rogueFilter)}} id="rogueFilter" className="hidden" />
                     <label  htmlFor="rogueFilter" className={`checkbox ${rogueFilter? "checkbox-selected" : "checkbox-not-selected"}`}>
-                        <img title="Rogue" className="w-9" src="/assets/icons/classes/rogue.png"/>
+                        <img title="Rogue" className="w-9" src="./assets/icons/classes/rogue.png"/>
                         
                     </label>
 
                     <input type="checkbox" onClick={()=>{setDruidFilter(!druidFilter)}} id="druidFilter" className="hidden" />
                     <label htmlFor="druidFilter" className={`checkbox ${druidFilter? "checkbox-selected" : "checkbox-not-selected"}`}>
-                        <img title="Druid" className="w-9" src="/assets/icons/classes/druid.png"/>
+                        <img title="Druid" className="w-9" src="./assets/icons/classes/druid.png"/>
                     </label>
 
                     <input type="checkbox" onClick={()=>{setPaladinFilter(!paladinFilter)}} id="paladinFilter" className="hidden" />
                     <label htmlFor="paladinFilter" className={`checkbox ${paladinFilter? "checkbox-selected" : "checkbox-not-selected"}`}>
-                        <img title="Paladin" className="w-9" src="assets/icons/classes/paladin.png"/>
+                        <img title="Paladin" className="w-9" src="./assets/icons/classes/paladin.png"/>
                     </label>
 
                     <input type="checkbox" onClick={()=>{setWizardFilter(!wizardFilter)}} id="wizardFilter" className="hidden" />
                     <label htmlFor="wizardFilter" className={`checkbox ${wizardFilter? "checkbox-selected" : "checkbox-not-selected"}`}>
-                        <img title="Wizard" className="w-9" src="assets/icons/classes/wizard.png"/>
+                        <img title="Wizard" className="w-9" src="./assets/icons/classes/wizard.png"/>
                     </label>
 
                     <input type="checkbox" onClick={()=>{setWarriorFilter(!warriorFilter)}} id="warriorFilter" className="hidden" />
                     <label htmlFor="warriorFilter" className={`checkbox ${warriorFilter? "checkbox-selected" : "checkbox-not-selected"}`}>
-                        <img title="Warrior" className="w-9" src="/assets/icons/classes/warrior.png"/>
+                        <img title="Warrior" className="w-9" src="./assets/icons/classes/warrior.png"/>
                     </label>
 
                     <input type="checkbox" onClick={()=>{setClericFilter(!clericFilter)}} id="clericFilter" className="hidden" />
                     <label htmlFor="clericFilter" className={`checkbox ${clericFilter? "checkbox-selected" : "checkbox-not-selected"}`}>
-                        <img title="Cleric" className="w-9" src="/assets/icons/classes/cleric.png"/>
+                        <img title="Cleric" className="w-9" src="./assets/icons/classes/cleric.png"/>
                     </label>
                                     
                 </div>

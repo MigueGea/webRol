@@ -22,16 +22,16 @@ export const NavigationBar: FC = () => {
                 
     {/* main image container: */}
   <div className="flex justify-center ">
-    <Link state={{ location: "home" }}  to="/">
-       <a href="/home" className="w-[70%] pt-4">                 
-          <img src="/assets/img/mainWebIcon.png" alt="Welcome"/>
-      </a> 
+    <Link state={{ location: "home" }}  to="/webRol/">
+        <div className="w-[70%] pt-4 ml-7">
+             <img src="./assets/img/mainWebIcon.png" alt="Welcome"/>
+        </div>
       </Link>
   </div>
   {/* Option list */}
   <div className="mt-5 grow border-b border-y-teal-800">
       <ul className="text-xl font-semibold mb-4 text-neutral-300">
-      <Link state={{ location: "home" }}  to="/">
+      <Link state={{ location: "home" }}  to="/webRol/">
           <li id="liHome" onClick={() => handleLiClick('home')} className={`li-navigation-bar ${liSelected == 'home' ? 'li-selected' : ''}`}>
               <svg className="w-9 fill-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <title>home</title>
@@ -41,19 +41,19 @@ export const NavigationBar: FC = () => {
              
           </li>
           </Link>
-          <Link to="/characters" state={{ location: "characters" }}>
+          <Link to="/webRol/characters" state={{ location: "characters" }}>
           <li  id="liCharacters" onClick={() => handleLiClick('characters')} className={`li-navigation-bar ${liSelected == 'characters' ? 'li-selected' : ''}`}>
               
-              <img className="w-9" src="/../assets/img/characters.png"/>
+              <img className="w-9" src="./assets/img/characters.png"/>
               <p className="my-auto">Characters</p>    
           </li>
           </Link> 
           <li onClick={() => handleLiClick('classes')} className={`li-navigation-bar ${liSelected == 'classes' ? 'li-selected' : ''}`}>
-              <img className="w-9" src="/assets/img/classes.png"/>
+              <img className="w-9" src="./assets/img/classes.png"/>
               <p className="my-auto">Classes</p>  
           </li>
           <li onClick={() => handleLiClick('adventures')} className={`li-navigation-bar ${liSelected == 'adventures' ? 'li-selected' : ''}`}>
-             <img className="w-9" src="/assets/img/adventures.png"/>
+             <img className="w-9" src="./assets/img/adventures.png"/>
             <p className="my-auto">Adventures</p>  
                
           </li>
@@ -61,10 +61,10 @@ export const NavigationBar: FC = () => {
   </div>
    {/* settings image container: */}
    <div className="flex text-xl font-semibold text-neutral-300">   
-      <a href="/characters" className="px-4 hover:bg-black/20 flex gap-3 grow py-4">
-          <img src="/assets/img/SettingsIcon.png" alt="Settings" className="w-9" />
+      <div className="px-4 hover:bg-black/20 flex gap-3 grow py-4">
+          <img src="./assets/img/SettingsIcon.png" alt="Settings" className="w-9" />
           <div className="my-auto">Options</div>
-      </a>              
+      </div>              
      
   </div>
 </div>);

@@ -4,7 +4,7 @@ import { NavigationBar } from './NavigationBar';
 import { CharacterLayout } from './CharacterLayout.tsx';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-
+ 
 export const Layout: FC = () =>{
     
     return (
@@ -17,8 +17,8 @@ export const Layout: FC = () =>{
              {/* Rigth column */}   
             <div id="layoutRigthSide" className="container px-20 py-10">
            <Routes> 
-                <Route path="/" element={<WelcomePage />} />
-                <Route path="/characters" element={<CharacterLayout />} />
+                <Route path="/webRol/" element={<WelcomePage />} />
+                <Route path="/webRol/characters" element={<CharacterLayout />} />
            </Routes>        
              </div>
         </div>

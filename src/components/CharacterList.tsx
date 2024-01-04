@@ -22,13 +22,13 @@ return (
    //Div containing the character list
     <div className='flex flex-wrap gap-10 justify-center select-none xl:mx-10 my-2'>
         {characters.map((characterEach) => (
-            <a >
+            <a key={characterEach.id}>
                 <div className='rounded-sm rounded-tr-3xl bg-slate-600/25 shadow-2xl ring-white backdrop-blur-sm transition duration-300 hover:ring-2 hover:scale-105'>
-                    <div className="relative w-40 h-[240px]" key={characterEach.id}>
+                    <div className="relative w-40 h-[240px]" >
                   
                         <img className="" src={`${characterEach.picture}`}/>
                         <div>
-                             <img className="w-9 absolute right-1 top-1" src={`assets/icons/classes/${characterEach.class}.png`}></img>
+                             <img className="w-9 absolute right-1 top-1" src={`./assets/icons/classes/${characterEach.class}.png`}></img>
                         </div>
                         <div className='flex flex-col flex-grow items-center'>
                             <p className=''>{characterEach.name}</p>

@@ -12,10 +12,10 @@ export interface Character {
 
 //Character array
 export const getCharacters = async() => {
-    const response = await fetch("src/JSONs/Characters.json");
+    const response = await fetch("./src/JSONs/Characters.json");
     if(response){
+         //crear el array de personajes.
         const data : Character[]= await response.json();
-        //crear el array de personajes.
         return data;
     }
 };
