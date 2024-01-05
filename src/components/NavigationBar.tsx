@@ -1,6 +1,13 @@
 import { FC, useEffect, useState } from "react";
 import { Link,useLocation  } from "react-router-dom";
 import { handlePageChange } from "../ts/layout/layoutFuncions";
+import imgMainWebIcon from '../assets/img/mainWebIcon.png';
+import imgCharacters from '../assets/img/characters.png';
+import imgClasses from '../assets/img/classes.png';
+import imgAdventures from '../assets/img/adventures.png';
+import imgSettings from '../assets/img/SettingsIcon.png';
+
+
 
 export const NavigationBar: FC = () => {
     //state of the current location
@@ -24,7 +31,7 @@ export const NavigationBar: FC = () => {
   <div className="flex justify-center ">
     <Link state={{ location: "home" }}  to="/webRol/">
         <div className="w-[70%] pt-4 ml-7">
-             <img src="./assets/img/mainWebIcon.png" alt="Welcome"/>
+             <img src={imgMainWebIcon} alt="Welcome"/>
         </div>
       </Link>
   </div>
@@ -44,16 +51,16 @@ export const NavigationBar: FC = () => {
           <Link to="/webRol/characters" state={{ location: "characters" }}>
           <li  id="liCharacters" onClick={() => handleLiClick('characters')} className={`li-navigation-bar ${liSelected == 'characters' ? 'li-selected' : ''}`}>
               
-              <img className="w-9" src="./assets/img/characters.png"/>
+              <img className="w-9" src={imgCharacters}/>
               <p className="my-auto">Characters</p>    
           </li>
           </Link> 
           <li onClick={() => handleLiClick('classes')} className={`li-navigation-bar ${liSelected == 'classes' ? 'li-selected' : ''}`}>
-              <img className="w-9" src="./assets/img/classes.png"/>
+              <img className="w-9" src={imgClasses}/>
               <p className="my-auto">Classes</p>  
           </li>
           <li onClick={() => handleLiClick('adventures')} className={`li-navigation-bar ${liSelected == 'adventures' ? 'li-selected' : ''}`}>
-             <img className="w-9" src="./assets/img/adventures.png"/>
+             <img className="w-9" src={imgAdventures}/>
             <p className="my-auto">Adventures</p>  
                
           </li>
@@ -62,7 +69,7 @@ export const NavigationBar: FC = () => {
    {/* settings image container: */}
    <div className="flex text-xl font-semibold text-neutral-300">   
       <div className="px-4 hover:bg-black/20 flex gap-3 grow py-4">
-          <img src="./assets/img/SettingsIcon.png" alt="Settings" className="w-9" />
+          <img src={imgSettings} alt="Settings" className="w-9" />
           <div className="my-auto">Options</div>
       </div>              
      
