@@ -1,10 +1,11 @@
 import characters from '../../JSONs/Characters.json';
 import iconCleric from '../../assets/icons/classes/cleric.png';
 import iconDruid from '../../assets/icons/classes/druid.png';
-import iconPaladin from '../../assets/icons/classes/paladin.png';
+import iconPalad from '../../assets/icons/classes/paladin.png';
 import iconRogue from '../../assets/icons/classes/rogue.png';
 import iconWarrior from '../../assets/icons/classes/warrior.png';
 import iconWizard from '../../assets/icons/classes/wizard.png';
+import iconBard from '../../assets/icons/classes/bard.png';
 
 
 export interface Character {
@@ -30,8 +31,8 @@ export const getCharacterClass = (characterClass: string)=>{
     switch (characterClass) {
         case 'rogue':
             return iconRogue;
-        case 'paladin':
-            return iconPaladin;
+        case 'palad':
+            return iconPalad;
         case 'warrior':
             return iconWarrior;
         case 'druid':
@@ -40,6 +41,8 @@ export const getCharacterClass = (characterClass: string)=>{
             return iconWizard;
         case 'cleric':
             return iconCleric;
+        case 'bard':
+        return iconBard;
         default:
             return "" ;
     }

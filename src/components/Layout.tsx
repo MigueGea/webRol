@@ -10,16 +10,16 @@ export const Layout: FC = () =>{
     return (
         //Main div
         <Router>
-        <div  className="flex h-screen">
+        <div className="flex h-screen">
              {/* Left column */}
                 <NavigationBar/>
             
              {/* Rigth column */}   
-            <div id="layoutRigthSide" className="container px-20 py-10">
-           <Routes> 
-                <Route path="/webRol/" element={<WelcomePage />} />
-                <Route path="/webRol/characters" element={<CharacterLayout />} />
-           </Routes>        
+            <div id="layoutRigthSide" className="container px-20 py-2">
+                <Routes> 
+                        <Route path="/webRol/" element={<WelcomePage />} />
+                        <Route path="/webRol/characters" element={<CharacterLayout />} />
+                </Routes>        
              </div>
         </div>
         </Router>

@@ -4,7 +4,7 @@
         "name": "Mopri",
         "player":"Migue",
         "class":"rogue",
-        "relevance":"hero",
+        "relevance":"Hero",
         "race": "halfling",
         "picture":"./assets/img/characters/Mopri-WOB.png"
     },
@@ -13,7 +13,7 @@
         "name": "Pom",
         "player": "Rafa",
         "class":"druid",
-        "relevance":"hero",
+        "relevance":"Hero",
         "race": "dwarf",
         "picture":"./assets/img/characters/Pom-WOB.png"
     },
@@ -22,7 +22,7 @@
         "name": "Fernandog",
         "player": "Fernando",
         "class":"cleric",
-        "relevance":"hero",
+        "relevance":"Hero",
         "race": "dwarf",
         "picture":"./assets/img/characters/Fernandog-WOB.png"
     },
@@ -30,8 +30,8 @@
         "id": "4",
         "name": "Kaala",
         "player": "Vero",
-        "class":"paladin",
-        "relevance":"hero",
+        "class":"palad",
+        "relevance":"Hero",
         "race": "human",
         "picture":"./assets/img/characters/Kaala-WOB.png"
     },
@@ -40,7 +40,7 @@
         "name": "Ruina",
         "player":"Montes",
         "class":"wizard",
-        "relevance":"hero",
+        "relevance":"Hero",
         "race": "tiefling",
         "picture":"./assets/img/characters/Ruina-WOB.png"
 
@@ -50,9 +50,18 @@
         "name": "Mumpo",
         "player": "Alberto",
         "class":"warrior",
-        "relevance":"npc",
+        "relevance":"NPC",
         "race":"kobold",
         "picture":"./assets/img/characters/Mumpo-WOB.png"
+    },
+    {
+        "id": "7",
+        "name": "Eldelbar",
+        "player": "Maria",
+        "class":"bard",
+        "relevance":"Hero",
+        "race":"Semielf",
+        "picture":"./assets/img/characters/Maria-WOB.png"
     }
 
 ]

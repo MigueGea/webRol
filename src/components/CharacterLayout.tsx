@@ -1,23 +1,14 @@
 import { useState } from "react";
 import { CharacterList } from "./CharacterList";
-import iconRogue from '../assets/icons/classes/rogue.png';
-import iconDruid from '../assets/icons/classes/druid.png';
-import iconCleric from '../assets/icons/classes/cleric.png';
-import iconPaladin from '../assets/icons/classes/paladin.png';
-import iconWarrior from '../assets/icons/classes/warrior.png';
-import iconWizard from '../assets/icons/classes/Wizard.png';
+import { ClassCheckboxFilter } from "./ClassCheckboxFilter";
+import { RelevanceCheckboxFilter } from "./RelevanceCheckboxFilter";
+import { CharacterFilter } from "../ts/interfaces/CharacterFilter";
 
  
 export const CharacterLayout =() =>{
-    const [heroFilter, setHeroFilter] = useState(false);
-    const [npcFilter, setNpcFilter] = useState(false);
-    const [rogueFilter, setRogueFilter] = useState(false);
-    const [paladinFilter, setPaladinFilter] = useState(false);
-    const [wizardFilter, setWizardFilter] = useState(false);
-    const [druidFilter, setDruidFilter] = useState(false);
-    const [warriorFilter, setWarriorFilter] = useState(false);
-    const [clericFilter, setClericFilter] = useState(false);
 
+    const [filterOptions,setFilter] = useState<CharacterFilter>({classes: [],relevance: []});
+        
     return (
         <div className="flex flex-col p-10  text-xl font-semibold text-neutral-300 ">
             {/* Div for complete filter */}
@@ -38,55 +29,23 @@ export const CharacterLayout =() =>{
                 </div>
                 {/* Div for hero or npc filter*/}
                 <div className="flex justify-center">
-                    <input type="checkbox" onClick={()=>{setNpcFilter(!npcFilter)}} id="npcFilter" className="hidden" />
-                    <label htmlFor="npcFilter" className={`checkbox ${npcFilter? "checkbox-selected" : "checkbox-not-selected"}`}>
-                        <svg className="w-10 fill-purple-400" viewBox="0 0 547.37 547.36"> <title>NPC</title><path d="m273.71,547.31c-2.77-25.06-15.54-112.71-90.18-186.37C110.7,289.06,25.53,276.47.05,273.66c18.37.07,114.55-1.43,192.69-78.63C272.4,116.33,273.77,17.8,273.71,0c-.17,17.34.49,116.73,80.64,195.74,78.38,77.27,174.99,78.09,193.01,77.91-20.28.43-113.11,4.6-189.77,79.62-79.4,77.71-83.47,174.7-83.88,194.03Z"></path></svg>
-                    </label>
-                    
-                    <input type="checkbox" onClick={()=>{setHeroFilter(!heroFilter)}} id="heroFilter" className="hidden" />
-                    <label htmlFor="heroFilter" className={`checkbox ${heroFilter? "checkbox-selected" : "checkbox-not-selected"}`}>
-                        <svg className="w-10 fill-yellow-600" viewBox="0 0 547.37 547.36"> <title>Hero</title><path d="m273.71,547.31c-2.77-25.06-15.54-112.71-90.18-186.37C110.7,289.06,25.53,276.47.05,273.66c18.37.07,114.55-1.43,192.69-78.63C272.4,116.33,273.77,17.8,273.71,0c-.17,17.34.49,116.73,80.64,195.74,78.38,77.27,174.99,78.09,193.01,77.91-20.28.43-113.11,4.6-189.77,79.62-79.4,77.71-83.47,174.7-83.88,194.03Z"></path></svg>
-                    </label>
+                    <RelevanceCheckboxFilter filterOptions={filterOptions} onFilterChange={setFilter} characterRelevance="NPC" />
+                     <RelevanceCheckboxFilter filterOptions={filterOptions} onFilterChange={setFilter} characterRelevance="Hero" />
                     
                 </div>
 
                 {/* Div for classes filter*/}
                 <div className="flex justify-center">
-                    <input type="checkbox" onClick={()=>{setRogueFilter(!rogueFilter)}} id="rogueFilter" className="hidden" />
-                    <label  htmlFor="rogueFilter" className={`checkbox ${rogueFilter? "checkbox-selected" : "checkbox-not-selected"}`}>
-                        <img title="Rogue" className="w-9" src={iconRogue}/>
-                        
-                    </label>
-
-                    <input type="checkbox" onClick={()=>{setDruidFilter(!druidFilter)}} id="druidFilter" className="hidden" />
-                    <label htmlFor="druidFilter" className={`checkbox ${druidFilter? "checkbox-selected" : "checkbox-not-selected"}`}>
-                        <img title="Druid" className="w-9" src={iconDruid}/>
-                    </label>
-
-                    <input type="checkbox" onClick={()=>{setPaladinFilter(!paladinFilter)}} id="paladinFilter" className="hidden" />
-                    <label htmlFor="paladinFilter" className={`checkbox ${paladinFilter? "checkbox-selected" : "checkbox-not-selected"}`}>
-                        <img title="Paladin" className="w-9" src={iconPaladin}/>
-                    </label>
-
-                    <input type="checkbox" onClick={()=>{setWizardFilter(!wizardFilter)}} id="wizardFilter" className="hidden" />
-                    <label htmlFor="wizardFilter" className={`checkbox ${wizardFilter? "checkbox-selected" : "checkbox-not-selected"}`}>
-                        <img title="Wizard" className="w-9" src={iconWizard}/>
-                    </label>
-
-                    <input type="checkbox" onClick={()=>{setWarriorFilter(!warriorFilter)}} id="warriorFilter" className="hidden" />
-                    <label htmlFor="warriorFilter" className={`checkbox ${warriorFilter? "checkbox-selected" : "checkbox-not-selected"}`}>
-                        <img title="Warrior" className="w-9" src={iconWarrior}/>
-                    </label>
-
-                    <input type="checkbox" onClick={()=>{setClericFilter(!clericFilter)}} id="clericFilter" className="hidden" />
-                    <label htmlFor="clericFilter" className={`checkbox ${clericFilter? "checkbox-selected" : "checkbox-not-selected"}`}>
-                        <img title="Cleric" className="w-9" src={iconCleric}/>
-                    </label>
-                                    
+                    <ClassCheckboxFilter characterClass="rogue" />
+                    <ClassCheckboxFilter characterClass="druid" />
+                    <ClassCheckboxFilter characterClass="palad" />
+                    <ClassCheckboxFilter characterClass="wizard" />
+                    <ClassCheckboxFilter characterClass="warrior" />
+                    <ClassCheckboxFilter characterClass="bard" />
                 </div>
             </div>
-
-            <CharacterList/>
+           
+            <CharacterList filterOptions={filterOptions}/>
            
         </div>
     );

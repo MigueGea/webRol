@@ -19,3 +19,6 @@
 .checkbox-selected {
   @apply sm:hover:bg-neutral-600 bg-neutral-600/25;
 }
+body {
+  @apply font-mono;
+}

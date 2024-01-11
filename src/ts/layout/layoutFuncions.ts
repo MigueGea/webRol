@@ -1,6 +1,5 @@
 
 export const handlePageChange = (option: string) =>{
-    console.log(option);
     const liHome = document.getElementById("liHome");
     const liCharacters = document.getElementById("liCharacters")
     switch (option) {
@@ -18,4 +17,17 @@ export const handlePageChange = (option: string) =>{
             liCharacters?.classList.remove("li-selected");
             break;
     }
+}
+
+export const getRelevanceSVG = (option:string) =>{
+    switch (option) {
+        
+        case "Hero":
+            return "fill-yellow-600";
+        case "NPC":
+            return "fill-purple-400"
+        default:
+            return "";
+    }
+
 }
