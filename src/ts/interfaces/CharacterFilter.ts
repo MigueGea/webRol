@@ -7,7 +7,7 @@ export interface CharacterFilter {
 
 export const filterCharacters =(characters: Character[], characterFilter: CharacterFilter) =>{
     return characters.filter(character =>
-      
+      (characterFilter.classes.length === 0 || characterFilter.classes.some(filterValue => character.class.includes(filterValue))) &&
         (characterFilter.relevance.length === 0 || characterFilter.relevance.some(filterValue => character.relevance.includes(filterValue)))
     );
 };

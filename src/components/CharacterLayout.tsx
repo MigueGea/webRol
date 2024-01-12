@@ -36,12 +36,12 @@ export const CharacterLayout =() =>{
 
                 {/* Div for classes filter*/}
                 <div className="flex justify-center">
-                    <ClassCheckboxFilter characterClass="rogue" />
-                    <ClassCheckboxFilter characterClass="druid" />
-                    <ClassCheckboxFilter characterClass="palad" />
-                    <ClassCheckboxFilter characterClass="wizard" />
-                    <ClassCheckboxFilter characterClass="warrior" />
-                    <ClassCheckboxFilter characterClass="bard" />
+                    <ClassCheckboxFilter filterOptions={filterOptions} onFilterChange={setFilter} characterClass="rogue" />
+                    <ClassCheckboxFilter filterOptions={filterOptions} onFilterChange={setFilter} characterClass="druid" />
+                    <ClassCheckboxFilter filterOptions={filterOptions} onFilterChange={setFilter} characterClass="palad" />
+                    <ClassCheckboxFilter filterOptions={filterOptions} onFilterChange={setFilter} characterClass="wizard" />
+                    <ClassCheckboxFilter filterOptions={filterOptions} onFilterChange={setFilter} characterClass="warrior" />
+                    <ClassCheckboxFilter filterOptions={filterOptions} onFilterChange={setFilter} characterClass="bard" />
                 </div>
             </div>
            
