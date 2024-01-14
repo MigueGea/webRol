@@ -11,7 +11,7 @@ interface ClassCheckboxFilterProps {
 export const ClassCheckboxFilter:FC<ClassCheckboxFilterProps> = ({filterOptions, onFilterChange, characterClass}) => {
     const [iconClass, setIcon] = useState("");
     const [filterActive, setFilter] = useState(false);
-    let characterFilter:CharacterFilter = {classes:[],relevance:[]};
+    let characterFilter:CharacterFilter = {classes:[],relevance:[], name: "" };
 
     useEffect(()=> {
         setIcon(getCharacterClass(characterClass));
@@ -19,7 +19,7 @@ export const ClassCheckboxFilter:FC<ClassCheckboxFilterProps> = ({filterOptions,
 
     const handleClassFilter = (event:ChangeEvent<HTMLInputElement>) =>{
         setFilter(!filterActive);
-        characterFilter = { classes: [...filterOptions.classes], relevance: [...filterOptions.relevance] };
+        characterFilter = { classes: [...filterOptions.classes], relevance: [...filterOptions.relevance], name: filterOptions.name  };
       
         if(event.target.checked){
             characterFilter.classes.push(characterClass);
@@ -28,6 +28,7 @@ export const ClassCheckboxFilter:FC<ClassCheckboxFilterProps> = ({filterOptions,
             characterFilter.classes = characterFilter.classes.filter(valor => valor !== characterClass);
             onFilterChange(characterFilter);
         }
+      
     }
 
     return(

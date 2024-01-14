@@ -1,6 +1,6 @@
 import { FC, useEffect, useState } from 'react';
 import { getCharacters,Character, getCharacterClass } from '../ts/interfaces/Character';
-import { CharacterFilter, filterCharacters } from '../ts/interfaces/CharacterFilter';
+import { CharacterFilter, filterCharacters} from '../ts/interfaces/CharacterFilter';
 
 
 export const CharacterList:FC<{filterOptions: CharacterFilter}> = ({filterOptions}) =>{
@@ -14,9 +14,7 @@ export const CharacterList:FC<{filterOptions: CharacterFilter}> = ({filterOption
         const characterListFecth: Character[] | undefined = await getCharacters();
         characterListFecth == undefined ? setCharacters([]): setCharacters(characterListFecth);
         characterListFecth == undefined ? setAllCharacters([]): setAllCharacters(characterListFecth);
-       
         //creating a list of divs containing all the characters obtained on the fech.
-
         }
         fechCharacterList();
         

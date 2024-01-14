@@ -11,7 +11,7 @@ interface RelevanceCheckboxFilterProps {
 export const RelevanceCheckboxFilter:FC<RelevanceCheckboxFilterProps> = ({filterOptions, onFilterChange, characterRelevance}) => {
     const [relevanceColor, setIcon] = useState("");
     const [filterActive, setFilterBoolean] = useState(false);
-    let characterFilter:CharacterFilter = {classes:[],relevance:[]};
+    let characterFilter:CharacterFilter = {classes:[],relevance:[], name: "" };
 
     useEffect(()=> {
         setIcon(getRelevanceSVG(characterRelevance));
@@ -20,7 +20,7 @@ export const RelevanceCheckboxFilter:FC<RelevanceCheckboxFilterProps> = ({filter
     const handleRelevanceFilter = (event:ChangeEvent<HTMLInputElement>) =>{
         setFilterBoolean(!filterActive);
         //init the aux filter
-        characterFilter = { classes: [...filterOptions.classes], relevance: [...filterOptions.relevance] };
+        characterFilter = { classes: [...filterOptions.classes], relevance: [...filterOptions.relevance], name: filterOptions.name  };
        
         if(event.target.checked){
             characterFilter.relevance.push(characterRelevance);

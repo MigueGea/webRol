@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { ChangeEvent, useState } from "react";
 import { CharacterList } from "./CharacterList";
 import { ClassCheckboxFilter } from "./ClassCheckboxFilter";
 import { RelevanceCheckboxFilter } from "./RelevanceCheckboxFilter";
@@ -7,7 +7,15 @@ import { CharacterFilter } from "../ts/interfaces/CharacterFilter";
  
 export const CharacterLayout =() =>{
 
-    const [filterOptions,setFilter] = useState<CharacterFilter>({classes: [],relevance: []});
+    const [filterOptions,setFilter] = useState<CharacterFilter>({classes: [],relevance: [], name:""});
+    let characterFilterAux:CharacterFilter = {classes:[],relevance:[], name:""};
+
+    const onNameFilterChange = (event:ChangeEvent<HTMLInputElement>) =>{
+        characterFilterAux = { classes: [...filterOptions.classes], relevance: [...filterOptions.relevance], name: filterOptions.name};
+        characterFilterAux.name = event.target.value;
+        setFilter(characterFilterAux);
+
+    }
         
     return (
         <div className="flex flex-col p-10  text-xl font-semibold text-neutral-300 ">
@@ -25,7 +33,7 @@ export const CharacterLayout =() =>{
                     
                 {/* Div for input*/}
                 <div className="my-auto">          
-                    <input placeholder="Character name" className="rounded-md  p-2 placeholder-neutral-600 text-black"></input>
+                    <input placeholder="Character name" onChange={onNameFilterChange} className="rounded-md  p-2 placeholder-neutral-600 text-black"></input>
                 </div>
                 {/* Div for hero or npc filter*/}
                 <div className="flex justify-center">
@@ -44,9 +52,7 @@ export const CharacterLayout =() =>{
                     <ClassCheckboxFilter filterOptions={filterOptions} onFilterChange={setFilter} characterClass="bard" />
                 </div>
             </div>
-           
             <CharacterList filterOptions={filterOptions}/>
-           
         </div>
     );
 }
