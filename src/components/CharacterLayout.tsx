@@ -18,7 +18,7 @@ export const CharacterLayout =() =>{
     }
         
     return (
-        <div className="flex flex-col p-10  text-xl font-semibold text-neutral-300 ">
+        <div className="flex flex-col p-10 text-xl font-semibold text-neutral-300 ">
             {/* Div for complete filter */}
             <div className="flex flex-wrap justify-around border border-teal-800 bg-neutral-900/90 rounded-md p-5">
                 {/* Div for filter with options */}
@@ -33,7 +33,7 @@ export const CharacterLayout =() =>{
                     
                 {/* Div for input*/}
                 <div className="my-auto">          
-                    <input placeholder="Character name" onChange={onNameFilterChange} className="rounded-md  p-2 placeholder-neutral-600 text-black"></input>
+                    <input placeholder="Character name" onChange={onNameFilterChange} className="rounded-md p-2 placeholder-neutral-600 text-black"></input>
                 </div>
                 {/* Div for hero or npc filter*/}
                 <div className="flex justify-center">

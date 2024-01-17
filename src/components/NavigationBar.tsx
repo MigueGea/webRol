@@ -59,11 +59,12 @@ export const NavigationBar: FC = () => {
               <img className="w-9" src={imgClasses}/>
               <p className="my-auto">Classes</p>  
           </li>
-          <li onClick={() => handleLiClick('adventures')} className={`li-navigation-bar ${liSelected == 'adventures' ? 'li-selected' : ''}`}>
+          <Link to="/webRol/adventures" state={{ location: "adventures" }}>
+          <li id="liAdventures" onClick={() => handleLiClick('adventures')} className={`li-navigation-bar ${liSelected == 'adventures' ? 'li-selected' : ''}`}>
              <img className="w-9" src={imgAdventures}/>
             <p className="my-auto">Adventures</p>  
-               
           </li>
+          </Link>
       </ul>
   </div>
    {/* settings image container: */}

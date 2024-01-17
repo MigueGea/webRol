@@ -3,6 +3,8 @@ import { WelcomePage } from './WelcomePage';
 import { NavigationBar } from './NavigationBar';
 import { CharacterLayout } from './CharacterLayout.tsx';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { AdventuresLayout } from './AdventuresLayout.tsx';
+import { AdventureHistory } from './AdventureHistory.tsx';
 
  
 export const Layout: FC = () =>{
@@ -18,7 +20,9 @@ export const Layout: FC = () =>{
             <div id="layoutRigthSide" className="container px-20 py-2">
                 <Routes> 
                         <Route path="/webRol/" element={<WelcomePage />} />
-                        <Route path="/webRol/characters" element={<CharacterLayout />} />
+                        <Route path="/webRol/characters/" element={<CharacterLayout />} />
+                        <Route path="/webRol/adventures/" element={<AdventuresLayout />} />
+                        <Route path="/webRol/adventures/:adventure" element={<AdventureHistory/>} />
                 </Routes>        
              </div>
         </div>
