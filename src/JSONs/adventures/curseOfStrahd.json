@@ -1,0 +1,13 @@
+    {
+        "id":"2",
+        "name": "Curse of Strahd",
+        "picture":"./assets/img/adventures/Curse_of_Strahd.webp",
+        "path":"curseOfStrahd",
+        "summary": "Ni puta idea pero el alberto dice que nos van a cagar a palos si no tenemos cuidao",
+        "chapters":[
+            {   "title":"Chapter one",
+                "chapterSummary":[""],
+                "maps":["./assets/img/adventures/maps/barovia.webp"]
+             }
+            ]
+    }

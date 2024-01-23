@@ -1,0 +1,39 @@
+{   
+    "id": "1",
+    "name": "Dragons of Stormwreck Isle",
+    "picture":"./assets/img/adventures/Dragons_of_Stormwreck_Isle.webp",
+    "path":"dragonsOfStormwreckIsle",
+    "summary": "In this adventure, our heroes must save Stormwreck Isle from its fatal fate: A dragon are preparing a ritual to become stronger and will consume all the island if this ritual is completed , leading to its destruction.",
+    "chapters":[
+        {"title":"Chapter one",
+        "chapterSummary":["Our adventures arrive to Storm Wreck Isle looking for fortune and glory.",
+                          "Once there, they meet the people of Dragons Rest, who entrust them with the mission of rescuing the island from a Dragon.",
+                          "The heroes head to a cave to investigate a mistery, but halfway through they seem to run into trouble, as an enemies attacks them."],
+            "maps":["../assets/img/adventures/maps/dragonsOfStormWreckIsle/stormWreckIsle.webp",
+                    "../assets/img/adventures/maps/dragonsOfStormWreckIsle/dragonsRest.webp",
+                    "../assets/img/adventures/maps/dragonsOfStormWreckIsle/battleWaters.webp"]
+            
+            },
+            {"title":"Chapter two",
+            "chapterSummary":["llega mopri y bisho fuera.",
+            "pupitaso.",
+            "rescatan a los setálidos jejes."],
+            "maps":["../assets/img/adventures/maps/dragonsOfStormWreckIsle/battleWaters.webp",
+                    "../assets/img/adventures/maps/dragonsOfStormWreckIsle/seagrowCaves.webp",
+                    "../assets/img/adventures/maps/dragonsOfStormWreckIsle/seagrowCaves.webp"]
+        
+        },
+        {"title":"Chapter three",
+        "chapterSummary":[""],
+        "maps":[""]
+        },
+        {"title":"Chapter four",
+        "chapterSummary":[""],
+        "maps":[""]
+        },
+        {"title":"Chapter five",
+        "chapterSummary":[""],
+        "maps":[""]
+        }
+    ]
+}

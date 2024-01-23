@@ -1,7 +1,7 @@
 import { Carousel } from "react-responsive-carousel"
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { useEffect, useState} from "react";
-import { Adventure, getAdventures } from "../ts/interfaces/Adventures";
+import { Adventure, getAllAdventures } from "../ts/interfaces/Adventures";
 import { Link } from "react-router-dom";
 
 export const AdventuresLayout = () =>{
@@ -10,7 +10,7 @@ export const AdventuresLayout = () =>{
 
     useEffect(()=>{
         const fechAdventureList = async () =>{
-        const adventureListFecth: Adventure[] | undefined = await getAdventures();
+        const adventureListFecth: Adventure[] | undefined = await getAllAdventures();
         adventureListFecth == undefined ? setAllAdventures([]): setAllAdventures(adventureListFecth);
         adventureListFecth == undefined ? setAllAdventures([]): setAllAdventures(adventureListFecth);
         //creating a list of divs containing all the characters obtained on the fech.
