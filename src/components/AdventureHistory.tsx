@@ -35,20 +35,25 @@ export const AdventureHistory: FC = () =>{
       }
     };
 
-    return (<div className="flex flex-col p-10 border border-teal-800 bg-neutral-900/90 text-xl font-semibold text-neutral-300">
-      <h1 className="mx-auto mb-4 font-bold">{adventure.name}</h1>
-      <p>{adventure.summary}</p>
-      <label>
-        Pick a chapter:
-        <select onChange={handleSelectChange}>
-          <option value="-1">Select...</option>
-          {chapterList.map((chapter, index) =>(
-            <option key={index} value={JSON.stringify(chapter)}>
-                {chapter.title}
-            </option>
-          ) )}
-        </select>
-      </label>
+    return (
+    <div className="flex flex-col p-10 border border-teal-800 bg-neutral-900/90 text-xl font-semibold text-neutral-300">
+     
+        <h1 className="mx-auto mb-4 font-bold">{adventure.name}</h1>
+        <p>{adventure.summary}</p>
+     
+       <div className="flex flex-row pb-4">
+        <label className="my-auto pr-4">
+          Pick a chapter:
+        </label>
+        <select onChange={handleSelectChange} className="border text-sm rounded-lg block w-fit p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 dark:text-white focus:ring-blue-500 focus:border-blue-500">
+            <option value="-1">Select...</option>
+            {chapterList.map((chapter, index) =>(
+              <option key={index} value={JSON.stringify(chapter)}>
+                  {chapter.title}
+              </option>
+            ) )}
+          </select>
+      </div>
 
       {showChapter && (
 
