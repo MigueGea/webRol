@@ -5,6 +5,7 @@ import { CharacterLayout } from './CharacterLayout.tsx';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { AdventuresLayout } from './AdventuresLayout.tsx';
 import { AdventureHistory } from './AdventureHistory.tsx';
+import { NavigationBarMobile } from './NavigationBarMobile.tsx';
 
  
 export const Layout: FC = () =>{
@@ -13,9 +14,9 @@ export const Layout: FC = () =>{
         //Main div
         <Router>
         <div className="flex h-screen">
-             {/* Left column */}
+             {/* Left column */}            
+                <NavigationBarMobile/>                 
                 <NavigationBar/>
-            
              {/* Rigth column */}   
             <div id="layoutRigthSide" className="container px-20 py-2">
                 <Routes> 

@@ -24,7 +24,7 @@ export const NavigationBar: FC = () => {
         setSelected(option);
     }
 
-    return ( <div id="layoutLeftSide" className="flex-shrink-0 w-1/6 bg-neutral-900 border-r border-r-teal-800 xl:flex flex-col">
+    return ( <div id="layoutLeftSide" className="flex-shrink-0 w-1/6 bg-neutral-900 border-r border-r-teal-800 xl:flex flex-col hidden xl:block">
 
                 
     {/* main image container: */}
