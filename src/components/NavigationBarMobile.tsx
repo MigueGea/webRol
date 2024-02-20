@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { handlePageChange } from '../ts/layout/layoutFuncions';
 import imgCharacters from '../assets/img/characters.png';
 import imgAdventures from '../assets/img/adventures.png';
+import menuMobile from '../assets/icons/svg/burger-menu-svgrepo-com.svg';
 
 export const NavigationBarMobile = () => {
    //state of the current location
@@ -21,12 +22,10 @@ export const NavigationBarMobile = () => {
    }
     return (
         <div className="block xl:hidden p-3">
-            <Menu customBurgerIcon={<svg className="fill-white" viewBox="0 0 40 40">
-                    <title>Menu</title>
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M6 3a1 1 0 0 1 .993 .883l.007 .117v3.171a3.001 3.001 0 0 1 0 5.658v7.171a1 1 0 0 1 -1.993 .117l-.007 -.117v-7.17a3.002 3.002 0 0 1 -1.995 -2.654l-.005 -.176l.005 -.176a3.002 3.002 0 0 1 1.995 -2.654v-3.17a1 1 0 0 1 1 -1z" stroke-width="0" fill="white"></path><path d="M12 3a1 1 0 0 1 .993 .883l.007 .117v9.171a3.001 3.001 0 0 1 0 5.658v1.171a1 1 0 0 1 -1.993 .117l-.007 -.117v-1.17a3.002 3.002 0 0 1 -1.995 -2.654l-.005 -.176l.005 -.176a3.002 3.002 0 0 1 1.995 -2.654v-9.17a1 1 0 0 1 1 -1z" stroke-width="0" fill="white"></path><path d="M18 3a1 1 0 0 1 .993 .883l.007 .117v.171a3.001 3.001 0 0 1 0 5.658v10.171a1 1 0 0 1 -1.993 .117l-.007 -.117v-10.17a3.002 3.002 0 0 1 -1.995 -2.654l-.005 -.176l.005 -.176a3.002 3.002 0 0 1 1.995 -2.654v-.17a1 1 0 0 1 1 -1z" stroke-width="0" fill="white"></path>
-                </svg>}>
+            <Menu customBurgerIcon={
+                 <img className="custom-width-12" src={menuMobile} alt="Menu" />} >
 
-               <div className="flex justify-center ">
+               <div className="flex justify-center">
                <Link state={{ location: "home" }}  to="/webRol/">
                 <li id="liHome" onClick={() => handleLiClick('home')} className={`li-navigation-bar ${liSelected == 'home' ? 'li-selected' : ''}`}>
                     <svg className="w-9 fill-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">

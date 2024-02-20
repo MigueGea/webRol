@@ -22,3 +22,11 @@
 body {
   @apply font-mono;
 }
+
+.custom-width-12 {
+  @apply w-12 !important;
+}
+
+#react-burger-menu-btn {
+  @apply h-12 w-12 !important;
+}
